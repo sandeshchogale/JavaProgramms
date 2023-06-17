@@ -12,6 +12,7 @@ public class MapSortingStreamAPI {
 	public static void main(String[] args) {
 		
 		mapSortingExample();
+		listDeclaration();
 		
 		Map<String, Integer> map = new HashMap<>();
 		map.put("Alice", 25);
@@ -166,5 +167,33 @@ public class MapSortingStreamAPI {
         System.out.println("Descending Order:");
         descendingMap.forEach((key, value) -> System.out.println(key + " -> " + value));
     }
+private static void listDeclaration() {
+		int[] array = {1,2,3};
+    	
+    	List<Integer> arrayList = new ArrayList<>();
+    	
+    	List<Integer> arraysAsList = Arrays.asList(1,2);
+    	
+    	List<Integer> streamAsList = Stream.of(1,2).collect(Collectors.toList());
+    	
+    	List<Integer> streamAsList1 = Stream.of(1,2).collect(Collectors.toCollection(ArrayList::new));
+    	
+    	List<Integer> singletoneList = Collections.singletonList(2);
+    	
+    	List<Integer> collectionsList = Collections.EMPTY_LIST;
+    	Collections.addAll(collectionsList = new ArrayList<Integer>(), 1, 2, 3, 4);
+    	
+    	List<Integer> listAdd = new ArrayList<Integer>() {{ add(1);add(3); }};
+    	
+    	List<Integer> llist = new LinkedList<Integer>();
+        llist.add(2);llist.add(4);
+        
+        List<Integer> aList=new ArrayList<Integer>();
+        List<Integer> liList=new LinkedList<Integer>();
+        List<Integer> stack=new Stack<Integer>();
+        
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+        Collections.sort(names, (String a, String b) -> a.compareTo(b));
+	}
 	
 }
